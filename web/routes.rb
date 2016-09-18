@@ -9,7 +9,7 @@ module Web
         redirect to("/calculator")
       end
 
-      app.get "/missions",           &mission_index
+      app.get "/calculator", &calc_show
     end
   end
 end
