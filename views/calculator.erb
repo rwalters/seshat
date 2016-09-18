@@ -1,4 +1,26 @@
-<h1>This is My Web Page</h1>
-<p>
-<h3>We will put the calculator here!</h3>
+<h1>Children's Calculator</h1>
+<br>
+<hr>
+<br>
+<form action='/calculator' method="POST">
+  <table>
+    <tr>
+      <td><input type='text' value="<%= @first_number %>" name='operand1' style='font-size: 16px;' placeholder="First number"></td>
+      <td>
+        <select name='operator' style='font-size: 16px;' >
+          <option <%= "selected" if @operator=='+' %>>+</option>
+          <option <%= "selected" if @operator=='-' %>>-</option>
+          <option <%= "selected" if @operator=='*' %>>*</option>
+          <option <%= "selected" if @operator=='/' %>>/</option>
+        </select>
+      </td>
+      <td><input type='text' name='operand2' value="<%= @second_number %>" style='font-size: 16px;' placeholder="Second number"></td>
+    </tr>
+    <tr>
+      <td width='3'><input type="submit" style='font-size: 16px;' value="find the answer"></td>
+    </tr>
+  </table>
+</form>
+<h3>We will put the calculator here!</h3><br>
+<%= @result %>
 </p>

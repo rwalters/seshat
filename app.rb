@@ -1,4 +1,5 @@
 require './config/init'
+require './lib/calculator'
 
 class Main < Sinatra::Base
   enable :sessions
