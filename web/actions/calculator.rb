@@ -12,8 +12,8 @@ module Web
       lambda do
         calc = Calculator.new
 
-        @first_number  = params[:operand1].to_i
-        @second_number = params[:operand2].to_i
+        @first_number  = params[:operand1].to_f
+        @second_number = params[:operand2].to_f
         @operator      = params[:operator]
 
         case @operator
